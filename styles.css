@@ -4,3 +4,15 @@
   padding: 0px;
   font-family: "Space Mono", monospace;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  letter-spacing: 5px;
+  font-weight: 200;
+}
