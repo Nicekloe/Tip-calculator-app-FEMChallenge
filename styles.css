@@ -5,9 +5,24 @@
   font-family: "Space Mono", monospace;
 }
 
+:root {
+  --light-cyan: rgb(203, 234, 237);
+  --very-light-cyan: rgb(244, 250, 250);
+}
+
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--light-cyan);
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -15,4 +30,23 @@ h1 {
   font-size: 24px;
   letter-spacing: 5px;
   font-weight: 200;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--very-light-cyan);
+  width: 75%;
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.column-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }

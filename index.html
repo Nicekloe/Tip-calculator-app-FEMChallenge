@@ -23,22 +23,35 @@
   </head>
   <body>
     <main>
-      <h1>SPLI</h1>
-      <h1>TTER</h1>
-      <section>
-        <div class="column-left">
-          <h3>Bill</h3>
-          <input type="text" name="bill-amount" id="" placeholder="$" />
-          Select Tip % 5% 10% 15% 25% 50% Custom Number of People
-        </div>
-        <div class="column-right">
-          <h3>Tip Amount</h3>
-          <h4>/ person</h4>
-          <h3>Total</h3>
-          <h4>/ person</h4>
-          <button type="reset">Reset</button>
-        </div>
-      </section>
+      <div class="container">
+        <h1>SPLI</h1>
+        <h1>TTER</h1>
+        <section>
+          <div class="column-left">
+            <h3>Bill</h3>
+            <input
+              type="text"
+              name="bill-amount"
+              id="bill-amount"
+              placeholder="$"
+            />
+            Select Tip % 5% 10% 15% 25% 50% Custom Number of People
+          </div>
+          <div class="column-right">
+            <div>
+              <h3>Tip Amount</h3>
+              <h4>/ person</h4>
+            </div>
+            <div class="tip-amount-display"></div>
+            <div>
+              <h3>Total</h3>
+              <h4>/ person</h4>
+            </div>
+            <div class="total-display"></div>
+            <button type="reset">Reset</button>
+          </div>
+        </section>
+      </div>
     </main>
   </body>
 </html>
