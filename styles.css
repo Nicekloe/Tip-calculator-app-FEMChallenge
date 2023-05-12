@@ -52,14 +52,16 @@ section {
   flex-direction: column;
   width: 50%;
   margin: 35px;
+  margin-right: 20px;
   border-radius: 10px;
 }
 
 .column-left p {
   margin-top: 10px;
+  color: var(--dark-grayish-cyan);
 }
 
-input[type="text"] {
+input[type="number"] {
   background-color: var(--light-grayish-cyan);
   border: none;
   border-radius: 5px;
@@ -67,33 +69,44 @@ input[type="text"] {
   margin-top: 5px;
   margin-bottom: 10px;
   padding: 10px;
+  text-align: right;
+  font-size: 20px;
+  color: var(--very-dark-cyan);
+  padding: 10px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 .bill-amount {
-  background-image: url();
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
 }
 
 .number-of-people {
+  background-image: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
 }
 
 ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 li {
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: center;
   list-style: none;
   width: 100px;
   background-color: var(--very-dark-cyan);
   height: 40px;
-  margin: 10px;
   color: var(--very-light-cyan);
   border-radius: 5px;
+  margin: 10px;
 }
 
 li:hover {
@@ -118,6 +131,7 @@ li:focus {
   align-items: center;
   width: 50%;
   margin: 35px;
+  margin-left: 20px;
   background-color: var(--very-dark-cyan);
   border-radius: 10px;
 }
@@ -181,12 +195,15 @@ button {
   margin-top: 50px;
   font-size: 15px;
   font-weight: 700;
+  margin-top: 75px;
 }
 
 button:hover {
   cursor: pointer;
   background-color: var(--very-light-cyan);
 }
+
+/* -------------------------------------------------- Media Queries -------------------------------------------- */
 
 @media screen and (max-width: 375px) {
   .container {
