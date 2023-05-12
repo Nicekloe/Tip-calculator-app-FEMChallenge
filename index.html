@@ -32,7 +32,7 @@
             <input
               type="text"
               name="bill-amount"
-              id="bill-amount"
+              class="bill-amount"
               placeholder="$"
             />
             <p>Select Tip %</p>
@@ -45,24 +45,29 @@
               <li>Custom</li>
             </ul>
             <p>Number of People</p>
-            <input type="text" name="" id="number-of-people" placeholder="**" />
+            <input
+              type="text"
+              name=""
+              class="number-of-people"
+              placeholder="**"
+            />
           </div>
           <div class="column-right">
-            <div class="tip">
+            <div class="tip-container">
               <div class="tip-heading">
-                <p>Tip Amount</p>
-                <p>/ person</p>
+                <p class="tip-amount">Tip Amount</p>
+                <p class="tip-amount-per-person">/ person</p>
               </div>
               <div class="tip-amount-display">$4.27</div>
             </div>
-            <div class="total">
+            <div class="total-container">
               <div class="total-heading">
-                <p>Total</p>
-                <p>/ person</p>
+                <p class="total">Total</p>
+                <p class="total-amount-per-person">/ person</p>
               </div>
-              <div class="total-display">$32.79</div>
+              <div class="total-amount-display">$32.79</div>
             </div>
-            <button type="reset">Reset</button>
+            <button type="reset">RESET</button>
           </div>
         </section>
       </div>

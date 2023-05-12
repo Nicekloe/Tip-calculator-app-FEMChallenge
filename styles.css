@@ -10,7 +10,7 @@
   --very-light-cyan: rgb(240, 255, 255);
   --very-dark-cyan: rgb(0, 73, 77);
   --dark-grayish-cyan: rgb(94, 122, 125);
-  --grayish-cyan: rgb(127, 156, 159);
+  --grayish-cyan: rgb(174, 206, 209);
   --light-grayish-cyan: rgb(221, 244, 247);
   --cyan: rgb(88, 227, 195);
 }
@@ -55,24 +55,25 @@ section {
   border-radius: 10px;
 }
 
-#bill-amount {
+.column-left p {
+  margin-top: 10px;
+}
+
+input[type="text"] {
   background-color: var(--light-grayish-cyan);
   border: none;
   border-radius: 5px;
   height: 40px;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 10px;
   padding: 10px;
 }
 
-#number-of-people {
-  background-color: var(--light-grayish-cyan);
-  border: none;
-  border-radius: 5px;
-  height: 40px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
+.bill-amount {
+  background-image: url();
+}
+
+.number-of-people {
 }
 
 ul {
@@ -91,14 +92,19 @@ li {
   background-color: var(--very-dark-cyan);
   height: 40px;
   margin: 10px;
-  color: var(--light-cyan);
+  color: var(--very-light-cyan);
   border-radius: 5px;
 }
 
 li:hover {
-  background-color: var(--cyan);
-  color: var(--very-darkcyan);
+  background-color: var(--grayish-cyan);
+  color: var(--very-dark-cyan);
   cursor: pointer;
+}
+
+li:active {
+  background-color: var(--cyan);
+  color: var(--very-light-cyan);
 }
 
 .column-right {
@@ -112,30 +118,65 @@ li:hover {
   border-radius: 10px;
 }
 
-.tip {
+.tip-container {
   display: flex;
+  justify-content: space-around;
   width: 100%;
   color: var(--light-grayish-cyan);
-  margin: 25px;
+  margin: 10px;
 }
 
-.total {
+.tip-heading {
+}
+
+.tip-amount {
+  font-size: 15px;
+}
+
+.tip-amount-per-person {
+  font-size: 10px;
+  color: var(--grayish-cyan);
+}
+
+.tip-amount-display {
+  font-size: 40px;
+  color: var(--cyan);
+}
+
+.total-container {
   display: flex;
+  justify-content: space-around;
   width: 100%;
   color: var(--light-grayish-cyan);
-  margin: 25px;
+}
+
+.total-amount {
+  font-size: 15px;
+}
+
+.total-amount-per-person {
+  font-size: 10px;
+  color: var(--grayish-cyan);
+}
+
+.total-amount-display {
+  font-size: 40px;
+  color: var(--cyan);
 }
 
 button {
   position: relative;
   justify-content: flex-end;
   background-color: var(--cyan);
+  color: var(--very-dark-cyan);
   width: 325px;
   height: 40px;
   bottom: 0px;
   border-radius: 5px;
   border: none;
   margin-top: 50px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 button:hover {
