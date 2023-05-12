@@ -44,7 +44,7 @@ section {
   width: 900px;
   height: 400px;
   border-radius: 25px;
-  margin: 50px;
+  margin-top: 50px;
 }
 
 .column-left {
@@ -105,6 +105,10 @@ li:hover {
 li:active {
   background-color: var(--cyan);
   color: var(--very-light-cyan);
+}
+
+li:focus {
+  /* background-color: var(--dark-grayish-cyan); */
 }
 
 .column-right {
@@ -182,4 +186,50 @@ button {
 button:hover {
   cursor: pointer;
   background-color: var(--very-light-cyan);
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .title {
+    margin-top: 50px;
+  }
+
+  section {
+    width: 375px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .column-left {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10px;
+  }
+
+  ul {
+  }
+
+  li {
+    width: 150px;
+    margin: 0px;
+    margin-top: 20px;
+    /* flex-wrap: nowrap; */
+  }
+
+  .column-right {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10px;
+  }
 }
