@@ -75,7 +75,7 @@ input[type="number"] {
   padding: 10px;
 }
 
-input::-webkit-inner-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
@@ -83,13 +83,13 @@ input::-webkit-outer-spin-button {
 .bill-amount {
   background-image: url("./images/icon-dollar.svg");
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: 10px center;
 }
 
 .number-of-people {
   background-image: url("./images/icon-person.svg");
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: 10px center;
 }
 
 ul {
