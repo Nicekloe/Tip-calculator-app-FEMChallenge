@@ -12,7 +12,7 @@
   --dark-grayish-cyan: rgb(94, 122, 125);
   --grayish-cyan: rgb(174, 206, 209);
   --light-grayish-cyan: rgb(221, 244, 247);
-  --cyan: rgb(88, 205, 178);
+  --cyan: rgb(103, 221, 194);
 }
 
 main {
@@ -76,7 +76,7 @@ input[type="number"] {
 }
 
 input[type="number"]::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
@@ -116,14 +116,19 @@ input::-webkit-outer-spin-button {
 }
 
 .tip-percentage:hover {
-  background-color: var(--grayish-cyan);
-  color: var(--very-dark-cyan);
   cursor: pointer;
+  background-color: var(--cyan);
+  color: var(--very-dark-cyan);
 }
 
 .tip-percentage:active {
-  background-color: var(--cyan);
-  color: var(--very-light-cyan);
+  background-color: var(--grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.tip-percentage:focus {
+  background-color: var(--grayish-cyan);
+  color: var(--very-dark-cyan);
 }
 
 #tip-percentage-custom {
@@ -231,6 +236,14 @@ button:hover {
   cursor: pointer;
   background-color: var(--very-light-cyan);
 }
+
+button:active {
+  background-color: var(--cyan);
+}
+
+/* button:focus {
+  background-color: var(--light-cyan);
+} */
 
 /* -------------------------------------------------- Media Queries -------------------------------------------- */
 
