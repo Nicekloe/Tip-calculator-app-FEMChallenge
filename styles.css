@@ -33,7 +33,7 @@ main {
 
 h1 {
   font-size: 24px;
-  letter-spacing: 5px;
+  letter-spacing: 8px;
   color: var(--dark-grayish-cyan);
 }
 
@@ -130,6 +130,8 @@ input::-webkit-outer-spin-button {
   /* background-color: var(--dark-grayish-cyan); */
 }
 
+/* -------------------------------------------------- Right Column -------------------------------------------- */
+
 .column-right {
   display: flex;
   flex-direction: column;
@@ -144,13 +146,16 @@ input::-webkit-outer-spin-button {
 
 .tip-container {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
   color: var(--light-grayish-cyan);
   margin: 10px;
 }
 
 .tip-heading {
+  display: flex;
+  flex-direction: column;
 }
 
 .tip-amount {
@@ -169,8 +174,9 @@ input::-webkit-outer-spin-button {
 
 .total-container {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
   color: var(--light-grayish-cyan);
 }
 
@@ -193,7 +199,8 @@ button {
   justify-content: flex-end;
   background-color: var(--cyan);
   color: var(--very-dark-cyan);
-  width: 325px;
+  /* width: 325px; */
+  width: 80%;
   height: 40px;
   bottom: 0px;
   border-radius: 5px;
