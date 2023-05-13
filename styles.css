@@ -92,37 +92,41 @@ input::-webkit-outer-spin-button {
   background-position: 10px center;
 }
 
-ul {
+.tip-percentages {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  /* width: 500px; */
+  align-items: center;
 }
 
-li {
+.tip-percentage {
   display: flex;
   align-items: center;
   justify-content: center;
-  list-style: none;
-  width: 100px;
+  width: 120px;
   background-color: var(--very-dark-cyan);
   height: 40px;
   color: var(--very-light-cyan);
   border-radius: 5px;
-  margin: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: none;
+  font-size: 20px;
 }
 
-li:hover {
+.tip-percentage:hover {
   background-color: var(--grayish-cyan);
   color: var(--very-dark-cyan);
   cursor: pointer;
 }
 
-li:active {
+.tip-percentage:active {
   background-color: var(--cyan);
   color: var(--very-light-cyan);
 }
 
-li:focus {
+.tip-percentage:focus {
   /* background-color: var(--dark-grayish-cyan); */
 }
 
