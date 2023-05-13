@@ -83,11 +83,13 @@ input::-webkit-outer-spin-button {
 .bill-amount {
   background-image: url("./images/icon-dollar.svg");
   background-repeat: no-repeat;
+  background-position: left;
 }
 
 .number-of-people {
   background-image: url("./images/icon-person.svg");
   background-repeat: no-repeat;
+  background-position: left;
 }
 
 ul {
