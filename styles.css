@@ -12,7 +12,7 @@
   --dark-grayish-cyan: rgb(94, 122, 125);
   --grayish-cyan: rgb(174, 206, 209);
   --light-grayish-cyan: rgb(221, 244, 247);
-  --cyan: rgb(88, 227, 195);
+  --cyan: rgb(88, 205, 178);
 }
 
 main {
@@ -126,6 +126,21 @@ input::-webkit-outer-spin-button {
   color: var(--very-light-cyan);
 }
 
+#tip-percentage-custom {
+  text-align: center;
+  cursor: text;
+  background-color: var(--light-cyan);
+  color: var(--very-dark-cyan);
+}
+
+#tip-percentage-custom:focus {
+  color: var(--very-dark-cyan);
+}
+
+#tip-percentage-custom:focus::placeholder {
+  color: transparent;
+}
+
 .tip-percentage:focus {
   /* background-color: var(--dark-grayish-cyan); */
 }
@@ -178,6 +193,7 @@ input::-webkit-outer-spin-button {
   align-items: center;
   width: 80%;
   color: var(--light-grayish-cyan);
+  margin: 10px;
 }
 
 .total-amount {
