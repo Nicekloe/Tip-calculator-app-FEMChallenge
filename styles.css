@@ -47,6 +47,8 @@ section {
   margin-top: 50px;
 }
 
+/* -------------------------------------------------- Left Column -------------------------------------------- */
+
 .column-left {
   display: flex;
   flex-direction: column;
@@ -147,10 +149,6 @@ input[type="number"]::-webkit-outer-spin-button {
   color: transparent;
 }
 
-.tip-percentage:focus {
-  /* background-color: var(--dark-grayish-cyan); */
-}
-
 /* -------------------------------------------------- Right Column -------------------------------------------- */
 
 .column-right {
@@ -221,7 +219,6 @@ button {
   justify-content: flex-end;
   background-color: var(--cyan);
   color: var(--very-dark-cyan);
-  /* width: 325px; */
   width: 80%;
   height: 40px;
   bottom: 0px;
@@ -241,10 +238,6 @@ button:hover {
 button:active {
   background-color: var(--cyan);
 }
-
-/* button:focus {
-  background-color: var(--light-cyan);
-} */
 
 /* -------------------------------------------------- Media Queries -------------------------------------------- */
 
