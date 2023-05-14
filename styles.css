@@ -248,47 +248,70 @@ button:active {
 /* -------------------------------------------------- Media Queries -------------------------------------------- */
 
 @media screen and (max-width: 375px) {
+  main {
+    justify-content: flex-end;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
   }
 
-  .container .title {
-    margin-top: 50px;
+  .title {
   }
 
   section {
     width: 375px;
-    height: 600px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
+    border-radius: 0px;
+    margin-top: 35px;
   }
 
   .column-left {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    justify-content: center;
+    /* align-items: center; */
+    width: 85%;
     margin: 10px;
   }
 
-  ul {
+  .tip-percentages {
+    /* width: 90%; */
   }
 
-  li {
-    width: 150px;
+  .tip-percentage {
+    width: 155px;
     margin: 0px;
-    margin-top: 20px;
+    margin-top: 10px;
     /* flex-wrap: nowrap; */
+  }
+
+  #tip-percentage-custom {
+    margin: 0px;
+    margin-top: 10px;
   }
 
   .column-right {
     display: flex;
     flex-direction: column;
     width: 90%;
+    height: 250px;
     margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+
+  .total-container {
+    margin-bottom: 0px;
+  }
+
+  button {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
