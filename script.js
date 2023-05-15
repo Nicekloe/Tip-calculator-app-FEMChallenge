@@ -19,12 +19,6 @@ let totalBillAmountPerPerson = 0;
 let tipAmountPerPerson = 0;
 
 
-console.log(billAmount);
-
-
-
-
-
 /*Define functions*/
 //Functions for displaying errors
 
@@ -45,7 +39,6 @@ function PeopleCheck(value){
     if(numberOfPeopleValue <= 0){
         peopleError.style.display = 'block';
         peopleClass.style.borderColor = 'hsla(0, 83%, 44%, 0.714)';
-
     }
     else{
         peopleError.style.display = 'none';
@@ -53,7 +46,6 @@ function PeopleCheck(value){
     }
     Calculate();
 }
-
 
 function Calculate(){
     //Let's check the values for nullability
@@ -108,7 +100,6 @@ tipChosen.forEach((e) => {
         }
     })
 })
-
 
 function reset() {
     bill = 0;
