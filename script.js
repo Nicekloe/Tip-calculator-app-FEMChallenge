@@ -1,5 +1,6 @@
+
 /*Define variables and pull the inputs from fields*/
-let billAmount = document.querySelector(".bill-amount");
+let billAmount = document.querySelector('.bill-amount');
 let billClass = document.querySelector(".bill");
 let peopleClass = document.querySelector(".people");
 let peopleError = document.querySelector(".people-error");
@@ -18,13 +19,32 @@ let numberOfPeopleValue = parseInt(numberOfPeople.value);
 let totalBillAmountPerPerson = 0;
 let tipAmountPerPerson = 0;
 
+console.log(billAmount);
+
 
 /*Define functions*/
 //Functions for displaying errors
 
+function Calculate(){
+    //Let's check the values for nullability
+    if(bill & tip & numberOfPeopleValue){
+        resetButton.disabled = false;
+        tipAmountPerPerson = ((bill * tip / 100) / numberOfPeopleValue);
+        totalBillAmountPerPerson = (bill / numberOfPeopleValue) + tipAmountPerPerson;
+
+        //display these values
+        tipPerPerson.innerText = `${tipAmountPerPerson.toFixed(2)}`;
+        totalBillPerPerson.innerText = `${totalBillAmountPerPerson.toFixed(2)}`;
+
+    }
+    else{
+        resetButton.disabled = true;
+    }
+}
+
 function TipCheck(value){
     tip = parseFloat(value);
-    if(tip <= 0){
+    if(tip < 0){
         tipError.style.display = 'block';
     }
     else{
@@ -36,7 +56,7 @@ function TipCheck(value){
 
 function PeopleCheck(value){
     numberOfPeopleValue = parseFloat(value);
-    if(numberOfPeopleValue <= 0){
+    if(numberOfPeopleValue < 0){
         peopleError.style.display = 'block';
         peopleClass.style.borderColor = 'hsla(0, 83%, 44%, 0.714)';
     }
@@ -47,22 +67,6 @@ function PeopleCheck(value){
     Calculate();
 }
 
-function Calculate(){
-    //Let's check the values for nullability
-    if(bill & tip & numberOfPeopleValue){
-        resetButton.disabled = false;
-        tipAmountPerPerson = ((bill * tip / 100) / numberOfPeopleValue);
-        totalBillAmountPerPerson = (bill / numberOfPeopleValue) + tipAmountPerPerson;
-
-        //display these values
-        tipPerPerson.innerText = `$${tipAmountPerPerson.toFixed(2)}`;
-        totalBillPerPerson.innerText = `$${totalBillAmountPerPerson.toFixed(2)}`;
-
-    }
-    else{
-        resetButton.disabled = true;
-    }
-}
 
 function resetColor() {
     tipChosen.forEach((e) => {

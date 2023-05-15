@@ -58,8 +58,10 @@
               class="number-of-people"
               onchange="peopleCheck(this.value)"
               placeholder="0"
+              value="5"
             />
             </div>
+          </div>
 
           <div class="column-right">
             <div class="tip-container">
@@ -76,7 +78,7 @@
               </div>
               <div class="total-amount-display">$0.00</div>
             </div>
-            <button type="reset" class="reset" disabled>RESET</button>
+            <button type="reset" onclick="reset()" class="reset" disabled>RESET</button>
           </div>
         </section>
       </div>

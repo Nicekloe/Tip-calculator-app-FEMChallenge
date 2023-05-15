@@ -75,27 +75,6 @@ section {
   margin-bottom: -25px;
 }
 
-/*This is for the bill and people input fields*/
-/*--------------------------------------*/
-.bill, .people {
-  width: 100%;
-  display: flex;
-  box-sizing: border-box;
-  background: hsl(189, 41%, 97%);
-  gap: 1rem;
-  border-radius: 0.35rem;
-  justify-content: center;
-  align-items: center;
-  padding-left: 0.7rem;
-  border: 0.13rem solid hsl(189, 41%, 97%);
-}
-
-.bill:focus-within, .people:focus-within, 
-.bill:hover, .people:hover {
-  border: 0.13rem solid hsl(172, 67%, 45%) !important;
-}
-/*--------------------------------------*/
-
 input[type="number"] {
   background-color: var(--light-grayish-cyan);
   border: none;
