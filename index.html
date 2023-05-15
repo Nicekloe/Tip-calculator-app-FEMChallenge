@@ -23,7 +23,7 @@
           <div class="column-left">
             <p>Bill</p>
             <div class="bill">
-              <input type="number" name="bill-amount" class="bill-amount" placeholder="0" />
+              <input type="number" name="bill-amount" class="bill-amount text-input input" placeholder="0" value="" />
             </div>
 
             <div class="error">
@@ -38,16 +38,16 @@
               <button class="button" value="15">15%</button>
               <button class="button" value="25">25%</button>
               <button class="button" value="50">50%</button>
-              <input type="number" class="custom-tipInput" onchange="tipCheck(this.value)" placeholder="Custom" />
+              <input type="number" class="custom-tipInput input" placeholder="Custom" value="" />
             </div>
 
             <div class="error">
               <p>Number of People</p>
-              <span class="people-error">Can't be zero</span>
+              <p class="people-error"></p>
             </div>
 
             <div class="people">
-              <input type="number" class="number-of-people" onchange="peopleCheck(this.value)" placeholder="0" />
+              <input type="number" class="number-of-people text-input input" placeholder="0" value="" />
             </div>
           </div>
 
@@ -66,7 +66,7 @@
               </div>
               <div class="total-amount-display">$0.00</div>
             </div>
-            <button type="reset" class="reset" disabled>RESET</button>
+            <button type="reset" class="reset reset-inactive" disabled>RESET</button>
           </div>
         </section>
       </div>

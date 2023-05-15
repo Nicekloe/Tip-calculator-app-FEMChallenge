@@ -73,14 +73,14 @@ section {
 
 .column-left p {
   color: var(--dark-grayish-cyan);
-  margin-bottom: -25px;
+  /* margin-bottom: -25px; */
 }
 
-input[type="number"] {
+.text-input {
   background-color: var(--light-grayish-cyan);
   border: none;
   border-radius: 5px;
-  height: 40px;
+  height: 50px;
   /* margin-top: 5px; */
   /* margin-bottom: 10px; */
   padding: 10px;
@@ -90,9 +90,19 @@ input[type="number"] {
   width: 100%;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+.text-input::-webkit-inner-spin-button,
+.text-input::-webkit-outer-spin-button,
+.custom-tipInput::-webkit-inner-spin-button,
+.custom-tipInput::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+
+/* .custom-tipInput {
+  margin-top: 10px;
+} */
+
+.custom-tipInput {
+  height: 40px;
 }
 
 .bill-amount {
@@ -110,12 +120,17 @@ input[type="number"]::-webkit-outer-spin-button {
 /*This is for the tips and button */
 /*--------------------------------------*/
 .tips {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 100%;
 }
 
 .tips button {
@@ -125,8 +140,10 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 1rem;
   color: white;
   border-radius: 0.35rem;
-  font-family: inherit;
   cursor: pointer;
+  width: 125px;
+  height: 50px;
+  margin-bottom: 10px;
 }
 
 .tips button:hover {
@@ -139,22 +156,27 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 1rem;
   text-align: right;
   padding: 0.7rem;
-  width: 100%;
-  box-sizing: border-box;
+  /* width: 100%; */
   border-radius: 0.35rem;
   font-family: inherit;
   letter-spacing: 0.1rem;
   color: hsl(183, 100%, 15%);
   border: 0.13rem solid hsl(189, 41%, 97%);
+  height: 50px;
+  width: 125px;
 }
 
-.tips input:not(:hover),
-.tip input:not(:focus) {
-  outline: none;
+.tips input::placeholder {
+  text-align: center;
 }
+
+/* .tips input:not(:hover),
+.tips input:not(:focus) {
+  outline: none;
+} */
 
 .tips input:hover,
-.tip input:focus {
+.tips input:focus {
   outline: 0.13rem solid hsl(172, 67%, 45%);
 }
 
@@ -214,7 +236,8 @@ input[type="number"]::-webkit-outer-spin-button {
   color: var(--cyan);
 }
 
-.reset {
+.reset,
+.reset-inactive {
   position: relative;
   justify-content: flex-end;
   background-color: var(--cyan);
