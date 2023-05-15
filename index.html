@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
 
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
@@ -21,35 +22,61 @@
         <section>
           <div class="column-left">
             <p>Bill</p>
-            <input type="number" name="bill-amount" class="bill-amount" placeholder="" />
-            <p>Select Tip %</p>
-            <div class="tip-percentages">
-              <input class="tip-percentage" type="button" value="5%" />
-              <input class="tip-percentage" type="button" value="10%" />
-              <input class="tip-percentage" type="button" value="15%" />
-              <input class="tip-percentage" type="button" value="25%" />
-              <input class="tip-percentage" type="button" value="50%" />
-              <input class="tip-percentage" type="number" name="" id="tip-percentage-custom" placeholder="Custom" />
+              <div class="bill">
+              <input
+                type="number"
+                name="bill-amount"
+                class="bill-amount"
+                placeholder="0"
+              />
             </div>
-            <p>Number of People</p>
-            <input type="number" name="" class="number-of-people" placeholder="" />
-          </div>
+            
+             <div class="error">
+                <p>Select Tip %</p>
+                <span class="tip-error">Can't be zero</span>
+              </div>   
+            
+            <div class="tips">
+                <!--Just using button tags here to display the tip percentage-->
+              <button class="button" value="5">5%</button>
+              <button class="button" value="10">10%</button>
+              <button class="button" value="15">15%</button>
+              <button class="button" value="25">25%</button>
+              <button class="button" value="50">50%</button>
+              <input type="number" class="custom-tipInput" 
+              onchange="tipCheck(this.value)" placeholder="Custom">
+              </div>
+            
+            <div class="error">
+              <p>Number of People</p>
+              <span class="people-error">Can't be zero</span>
+            </div>
+
+          <div class="people">
+              <input
+              type="number"
+              class="number-of-people"
+              onchange="peopleCheck(this.value)"
+              placeholder="0"
+            />
+            </div>
+
           <div class="column-right">
             <div class="tip-container">
               <div class="tip-heading">
                 <p class="tip-amount">Tip Amount</p>
                 <p class="tip-amount-per-person">/ person</p>
               </div>
-              <div class="tip-amount-display">$4.27</div>
+              <div class="tip-amount-display">$0.00</div>
             </div>
             <div class="total-container">
               <div class="total-heading">
                 <p class="total">Total</p>
                 <p class="total-amount-per-person">/ person</p>
               </div>
-              <div class="total-amount-display">$8.75</div>
+              <div class="total-amount-display">$0.00</div>
             </div>
-            <button type="reset">RESET</button>
+            <button type="reset" class="reset" disabled>RESET</button>
           </div>
         </section>
       </div>
