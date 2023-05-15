@@ -35,6 +35,7 @@ h1 {
   font-size: 24px;
   letter-spacing: 8px;
   color: var(--dark-grayish-cyan);
+  margin : 40px;
 }
 
 section {
@@ -42,28 +43,58 @@ section {
   flex-direction: row;
   background-color: var(--very-light-cyan);
   width: 900px;
-  height: 400px;
+  height: 450px;
   border-radius: 25px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 /* -------------------------------------------------- Left Column -------------------------------------------- */
 
-.column-left {
+.column-left, .column-right  {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
   margin: 35px;
-  margin-right: 20px;
   border-radius: 10px;
 }
 
+.column-left{
+      margin-right: 20px;
+}
+
+.column-right{
+      margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-dark-cyan);
+}
+
 .column-left p {
-  /* margin-top: 10px; */
   color: var(--dark-grayish-cyan);
   margin-bottom: -25px;
 }
+
+/*This is for the bill and people input fields*/
+/*--------------------------------------*/
+.bill, .people {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  background: hsl(189, 41%, 97%);
+  gap: 1rem;
+  border-radius: 0.35rem;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.7rem;
+  border: 0.13rem solid hsl(189, 41%, 97%);
+}
+
+.bill:focus-within, .people:focus-within, 
+.bill:hover, .people:hover {
+  border: 0.13rem solid hsl(172, 67%, 45%) !important;
+}
+/*--------------------------------------*/
 
 input[type="number"] {
   background-color: var(--light-grayish-cyan);
@@ -76,7 +107,6 @@ input[type="number"] {
   text-align: right;
   font-size: 20px;
   color: var(--very-dark-cyan);
-  padding: 10px;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -96,73 +126,60 @@ input[type="number"]::-webkit-outer-spin-button {
   background-position: 10px center;
 }
 
-.tip-percentages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: -15px;
+/*This is for the tips and button */
+/*--------------------------------------*/
+.tips{
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box; 
+    margin-bottom: 1rem;
 }
 
-.tip-percentage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  background-color: var(--very-dark-cyan);
-  height: 40px;
-  color: var(--very-light-cyan);
-  border-radius: 5px;
-  margin-bottom: 10px;
-  border: none;
-  font-size: 20px;
+.tips button{
+  padding: 0.7rem;
+    border: none;
+    background: hsl(183, 100%, 15%);
+    font-size: 1rem;
+    color: white;
+    border-radius: 0.35rem;
+    font-family: inherit;
+    cursor: pointer;
 }
 
-.tip-percentage:hover {
-  cursor: pointer;
-  background-color: var(--cyan);
-  color: var(--very-dark-cyan);
+.tips button:hover{
+  background: hsl(172, 67%, 45%);
+    color: black;
 }
 
-.tip-percentage:active {
-  background-color: var(--grayish-cyan);
-  color: var(--very-dark-cyan);
+.tips input{
+  background: hsl(189, 41%, 97%);
+    font-size: 1rem;
+    text-align: right;
+    padding: 0.7rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.35rem;
+    font-family: inherit;
+    letter-spacing: 0.1rem;
+    color: hsl(183, 100%, 15%);
+    border: 0.13rem solid hsl(189, 41%, 97%);
 }
 
-.tip-percentage:focus {
-  background-color: var(--grayish-cyan);
-  color: var(--very-dark-cyan);
+.tips input:not(:hover), .tip input:not(:focus) {
+  outline: none;
 }
 
-#tip-percentage-custom {
-  text-align: center;
-  cursor: text;
-  background-color: var(--light-cyan);
-  color: var(--very-dark-cyan);
+.tips input:hover, .tip input:focus {
+  outline: 0.13rem solid hsl(172, 67%, 45%);
 }
 
-#tip-percentage-custom:focus {
-  color: var(--very-dark-cyan);
-}
-
-#tip-percentage-custom:focus::placeholder {
-  color: transparent;
+.tips input::placeholder {
+  color: hsl(186, 14%, 43%);
 }
 
 /* -------------------------------------------------- Right Column -------------------------------------------- */
-
-.column-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  margin: 35px;
-  margin-left: 20px;
-  background-color: var(--very-dark-cyan);
-  border-radius: 10px;
-}
-
 .tip-container {
   display: flex;
   justify-content: space-between;
@@ -214,7 +231,7 @@ input[type="number"]::-webkit-outer-spin-button {
   color: var(--cyan);
 }
 
-button {
+.reset {
   position: relative;
   justify-content: flex-end;
   background-color: var(--cyan);
@@ -230,13 +247,29 @@ button {
   margin-top: 75px;
 }
 
-button:hover {
+.reset:hover {
   cursor: pointer;
   background-color: var(--very-light-cyan);
 }
 
-button:active {
+.reset:active {
   background-color: var(--cyan);
+}
+
+.reset:disabled{
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.error{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error span:last-child{
+  color: hsla(0, 83%, 44%, 0.714);
+  display: none;
 }
 
 /* -------------------------------------------------- Media Queries -------------------------------------------- */
@@ -251,9 +284,6 @@ button:active {
     flex-direction: column;
   }
 
-  .title {
-  }
-
   section {
     width: 375px;
     height: 650px;
@@ -265,37 +295,21 @@ button:active {
     margin-top: 35px;
   }
 
-  .column-left {
+  .column-left,   .column-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     /* align-items: center; */
     width: 85%;
     margin: 10px;
   }
-
-  .tip-percentages {
-    /* width: 90%; */
-  }
-
-  .tip-percentage {
-    width: 155px;
-    margin: 0px;
-    margin-top: 10px;
-    /* flex-wrap: nowrap; */
-  }
-
-  #tip-percentage-custom {
-    margin: 0px;
-    margin-top: 10px;
+  
+  .column-left{    
+    justify-content: center;
   }
 
   .column-right {
-    display: flex;
-    flex-direction: column;
     width: 90%;
     height: 250px;
-    margin: 10px;
     margin-top: 0px;
     margin-bottom: 25px;
   }
@@ -304,8 +318,19 @@ button:active {
     margin-bottom: 0px;
   }
 
-  button {
+  .reset {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
 }
